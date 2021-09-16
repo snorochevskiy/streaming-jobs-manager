@@ -1,0 +1,13 @@
+@()
+
+@main("Streaming Jobs Manager - Help") {
+  <h1>Help</h1>
+  <p>
+    RSS
+  </p>
+  <ul>
+    <li><a href="@controllers.routes.FeedController.emrRestartsHistory()">EMR applications restarts history feed</a></li>
+    <li><a href="@controllers.routes.FeedController.healthcheckFailsHistory()">EMR applications health check fails feed</a></li>
+    <li><a href="@controllers.routes.FeedController.genericAppEvents()">Events from non-EMR applications</a></li>
+  </ul>
+}

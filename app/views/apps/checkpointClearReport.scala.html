@@ -1,0 +1,23 @@
+@import service.ResetCheckpointsReport
+@(report: ResetCheckpointsReport)
+
+@main("Data-Valve checkpoint clearing") {
+
+<div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col-10">
+        <p>
+            For application @report.appId on EMR cluster with Master @report.masterIp stopped application @report.killedAppIds.mkString.
+        </p>
+        <p>
+            In DynamoDb @report.removedDynamoRecords._1 removed records @report.removedDynamoRecords._2.mkString(",")
+        </p>
+        <p>
+            In HDFS removed checkpoint directory @report.clearedHdfsFile
+        </p>
+    </div>
+    <div class="col-1">
+    </div>
+</div>
+}

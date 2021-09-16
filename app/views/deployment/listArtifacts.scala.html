@@ -1,0 +1,12 @@
+@import dto.DeploymentOption
+@(depls: List[DeploymentOption])
+
+@main("Streaming Jobs Manager - Deployment") {
+<h1>Select artifact to deploy</h1>
+<ul>
+    @for(depl <- depls) {
+        <li><a href="/deployment/list-configs/@depl.artifact">@depl.artifact</a></li>
+    }
+</ul>
+
+}

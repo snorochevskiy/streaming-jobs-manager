@@ -1,0 +1,64 @@
+@import service.EmrApp
+@import service.EmrDetails
+@import service.HealthIndicator
+@(apps:Seq[EmrApp])
+
+@main("Data-Valve clusters") {
+
+<div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col-10">
+        @for(app <- apps) {
+            <div class="card" style="width: 42rem;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        @app.name
+                        @if(app.cluster.isEmpty){
+                            <span class="badge badge-danger">DOWN</span>
+                        } else {
+                            <span class="badge badge-primary">@app.cluster.get.status.state</span>
+                            <a href="@controllers.routes.ManagedAppsController.appDetails(app.id)">&#9881;</a>
+                        }
+                    </h5>
+                    @if(app.cluster.isDefined){
+                        <h6 class="card-subtitle mb-2 text-muted">@app.cluster.get.id : @app.cluster.get.name</h6>
+                        <p>Created: @app.cluster.get.status.creationDate</p>
+                        <ul>
+                            @for(ig <- app.cluster.get.instanceGroups) {
+                            <li>@ig.getName() : @ig.getRunningInstanceCount() @ig.getInstanceType()</li>
+                            }
+                        </ul>
+                    }
+                    @if(app.healthIndicators.nonEmpty){
+                    <p>
+                        @defining(app.healthIndicators.forall(_.healthy)) { isHealthy =>
+                        <a class="btn @if(isHealthy){btn-success}else{btn-danger}" data-toggle="collapse" href="#collapse-@app.id" role="button" aria-expanded="false" aria-controls="collapse-@app.id">
+                            @if(isHealthy) { Healthy } else { Not Healthy }
+                        </a>
+                        }
+                    </p>
+                    }
+                    <div class="collapse" id="collapse-@app.id">
+                        <div class="card card-body">
+                            @for(hi <- app.healthIndicators){
+                                @if(hi.healthy) {
+                                    <div class="alert alert-success" role="alert">
+                                        @hi.name @hi.label
+                                    </div>
+                                }else{
+                                    <div class="alert alert-danger" role="alert">
+                                        @hi.name @hi.label
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-1">
+    </div>
+</div>
+}

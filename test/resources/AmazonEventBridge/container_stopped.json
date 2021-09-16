@@ -1,0 +1,68 @@
+{
+  "version": "0",
+  "id": "d51b8fdf-1a4d-5231-c3f8-f020ca4ea7dd",
+  "detail-type": "ECS Task State Change",
+  "source": "aws.ecs",
+  "account": "111111111111",
+  "time": "2021-03-16T03:29:10Z",
+  "region": "us-east-1",
+  "resources": [
+    "arn:aws:ecs:us-east-1:111111111111:task/my-container/93748019355a43f58ef666519c31f4f5"
+  ],
+  "detail": {
+    "attachments": [],
+    "availabilityZone": "us-east-1a",
+    "clusterArn": "arn:aws:ecs:us-east-1:111111111111:cluster/my-cluster",
+    "connectivity": "CONNECTED",
+    "connectivityAt": "2021-03-16T02:59:47.377Z",
+    "containerInstanceArn": "arn:aws:ecs:us-east-1:111111111111:container-instance/my-container/c955285b942b485ea0db1608963f5cd2",
+    "containers": [
+      {
+        "containerArn": "arn:aws:ecs:us-east-1:111111111111:container/c40e3dda-ff60-4a5b-9520-5370f366d9f7",
+        "lastStatus": "RUNNING",
+        "name": "myapp-0_2_6",
+        "image": "111111111111.dkr.ecr.us-east-1.amazonaws.com/myimage:0.2.6",
+        "imageDigest": "sha256:cb3ee74d651c744c1c38e7cad103c13d512ff79309d76a751f89adfdec40f54f",
+        "runtimeId": "c5b7fa524b3b8812502ddaa17114e8658e49f7a796760e0aca90ac1a74a08eb8",
+        "networkBindings": [
+          {
+            "bindIP": "0.0.0.0",
+            "containerPort": 8080,
+            "hostPort": 8081,
+            "protocol": "tcp"
+          }
+        ],
+        "taskArn": "arn:aws:ecs:us-east-1:111111111111:task/my-container/93748019355a43f58ef666519c31f4f5",
+        "networkInterfaces": [],
+        "cpu": "1024",
+        "memory": "2048"
+      }
+    ],
+    "cpu": "1024",
+    "createdAt": "2021-03-16T02:59:47.377Z",
+    "desiredStatus": "STOPPED",
+    "enableExecuteCommand": false,
+    "group": "service:mygroup-0_2_6",
+    "launchType": "EC2",
+    "lastStatus": "RUNNING",
+    "memory": "2048",
+    "overrides": {
+      "containerOverrides": [
+        {
+          "name": "mycontainer-0_2_6"
+        }
+      ]
+    },
+    "pullStartedAt": "2021-03-16T03:00:06.699Z",
+    "pullStoppedAt": "2021-03-16T03:00:06.949Z",
+    "startedAt": "2021-03-16T03:00:06.718Z",
+    "startedBy": "ecs-svc/9597995147909377383",
+    "stoppingAt": "2021-03-16T03:29:10.696Z",
+    "stoppedReason": "Task failed ELB health checks in (target-group arn:aws:elasticloadbalancing:us-east-1:111111111111:targetgroup/myapp/fbcb015c4a3ec9f6)",
+    "stopCode": "ServiceSchedulerInitiated",
+    "taskArn": "arn:aws:ecs:us-east-1:111111111111:task/my-task/93748019355a43f58ef666519c31f4f5",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:111111111111:task-definition/my-task-def:3",
+    "updatedAt": "2021-03-16T03:29:10.696Z",
+    "version": 3
+  }
+}

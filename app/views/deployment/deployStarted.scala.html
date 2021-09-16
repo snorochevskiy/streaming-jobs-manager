@@ -1,0 +1,12 @@
+@(emrClusterId: String)
+
+@main("Streaming Jobs Manager - Deployment") {
+<h1>Deployment has started</h1>
+
+<p>
+    Cluster ID: @emrClusterId
+</p>
+<p>
+    <a href="https://console.aws.amazon.com/elasticmapreduce/home?region=us-east-1#cluster-details:@emrClusterId">Link to cluster page</a>
+</p>
+}

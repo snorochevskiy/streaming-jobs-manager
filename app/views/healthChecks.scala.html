@@ -1,0 +1,28 @@
+@import service.DvAppHealth
+@(healthChecks:Seq[DvAppHealth])
+
+@main("Data-Valve Health-checks") {
+
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-10">
+            @for(hc <- healthChecks) {
+                <h2>@hc.app</h2>
+                @for(hi <- hc.healthIndicators) {
+                    @if(hi.healthy) {
+                        <div class="alert alert-success" role="alert">
+                            @hi.name @hi.label
+                        </div>
+                    } else {
+                        <div class="alert alert-danger" role="alert">
+                        @hi.name @hi.label
+                        </div>
+                    }
+                }
+            }
+        </div>
+        <div class="col-1">
+        </div>
+    </div>
+}

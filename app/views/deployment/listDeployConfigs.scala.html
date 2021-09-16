@@ -1,0 +1,12 @@
+@import dto.DeploymentOption
+@(artifact: String, depFiles: List[String])
+
+@main("Streaming Jobs Manager - Select deployment configuration file") {
+<h1>Select deployment configuration</h1>
+<ul>
+    @for(depFile <- depFiles) {
+    <li><a href="/deployment/configure/@artifact/@depFile">@depFile</a></li>
+    }
+</ul>
+
+}

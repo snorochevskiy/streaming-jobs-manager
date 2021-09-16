@@ -1,0 +1,225 @@
+Ivy Default Cache set to: /home/hadoop/.ivy2/cache
+The jars for the packages stored in: /home/hadoop/.ivy2/jars
+:: loading settings :: url = jar:file:/usr/lib/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-3dfa0c39-ff92-46b6-ba42-3b96b9662a7f;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.0.0 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.0.0 in central
+	found org.apache.kafka#kafka-clients;2.4.1 in central
+	found com.github.luben#zstd-jni;1.4.4-3 in central
+	found org.lz4#lz4-java;1.7.1 in central
+	found org.xerial.snappy#snappy-java;1.1.7.5 in central
+	found org.slf4j#slf4j-api;1.7.30 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+	found org.apache.commons#commons-pool2;2.6.2 in central
+:: resolution report :: resolve 383ms :: artifacts dl 10ms
+	:: modules in use:
+	com.github.luben#zstd-jni;1.4.4-3 from central in [default]
+	org.apache.commons#commons-pool2;2.6.2 from central in [default]
+	org.apache.kafka#kafka-clients;2.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.0.0 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.0.0 from central in [default]
+	org.lz4#lz4-java;1.7.1 from central in [default]
+	org.slf4j#slf4j-api;1.7.30 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.7.5 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   9   |   0   |   0   |   0   ||   9   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-3dfa0c39-ff92-46b6-ba42-3b96b9662a7f
+	confs: [default]
+	0 artifacts copied, 9 already retrieved (0kB/11ms)
+21/03/29 11:35:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+21/03/29 11:35:46 INFO RMProxy: Connecting to ResourceManager at ip-96-113-30-160.nest.r53.xcal.tv/96.113.30.160:8032
+21/03/29 11:35:46 INFO Client: Requesting a new application from cluster with 16 NodeManagers
+21/03/29 11:35:46 INFO Configuration: resource-types.xml not found
+21/03/29 11:35:46 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+21/03/29 11:35:46 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (57344 MB per container)
+21/03/29 11:35:46 INFO Client: Will allocate AM container, with 4505 MB memory including 409 MB overhead
+21/03/29 11:35:46 INFO Client: Setting up container launch context for our AM
+21/03/29 11:35:46 INFO Client: Setting up the launch environment for our AM container
+21/03/29 11:35:46 INFO Client: Preparing resources for our AM container
+21/03/29 11:35:46 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+21/03/29 11:35:48 INFO Client: Uploading resource file:/mnt/tmp/spark-1d923fa4-ce20-408e-acb6-25aa97cbaf70/__spark_libs__4008142511660515799.zip -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/__spark_libs__4008142511660515799.zip
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/streaming-jobs-.snmp-assembly-2.0.0.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/streaming-jobs-.snmp-assembly-2.0.0.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.0.0.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/org.apache.spark_spark-sql-kafka-0-10_2.12-3.0.0.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.0.0.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.0.0.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.kafka_kafka-clients-2.4.1.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/org.apache.kafka_kafka-clients-2.4.1.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/org.apache.commons_commons-pool2-2.6.2.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/org.spark-project.spark_unused-1.0.0.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/com.github.luben_zstd-jni-1.4.4-3.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/com.github.luben_zstd-jni-1.4.4-3.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/org.lz4_lz4-java-1.7.1.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.5.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/org.xerial.snappy_snappy-java-1.1.7.5.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/org.slf4j_slf4j-api-1.7.30.jar
+21/03/29 11:35:49 INFO Client: Uploading resource file:/mnt/tmp/spark-1d923fa4-ce20-408e-acb6-25aa97cbaf70/__spark_conf__8773732242148105452.zip -> hdfs://ip-96-113-30-160.nest.r53.xcal.tv:8020/user/hadoop/.sparkStaging/application_1615924390842_1197/__spark_conf__.zip
+21/03/29 11:35:49 INFO SecurityManager: Changing view acls to: hadoop
+21/03/29 11:35:49 INFO SecurityManager: Changing modify acls to: hadoop
+21/03/29 11:35:49 INFO SecurityManager: Changing view acls groups to:
+21/03/29 11:35:49 INFO SecurityManager: Changing modify acls groups to:
+21/03/29 11:35:49 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop); groups with view permissions: Set(); users  with modify permissions: Set(hadoop); groups with modify permissions: Set()
+21/03/29 11:35:49 INFO Client: Submitting application application_1615924390842_1197 to ResourceManager
+21/03/29 11:35:49 INFO YarnClientImpl: Submitted application application_1615924390842_1197
+21/03/29 11:35:50 INFO Client: Application report for application_1615924390842_1197 (state: ACCEPTED)
+21/03/29 11:35:50 INFO Client:
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1617017749852
+	 final status: UNDEFINED
+	 tracking URL: http://ip-96-113-30-160.nest.r53.xcal.tv:20888/proxy/application_1615924390842_1197/
+	 user: hadoop
+21/03/29 11:35:51 INFO Client: Application report for application_1615924390842_1197 (state: ACCEPTED)
+21/03/29 11:35:52 INFO Client: Application report for application_1615924390842_1197 (state: ACCEPTED)
+21/03/29 11:35:53 INFO Client: Application report for application_1615924390842_1197 (state: ACCEPTED)
+21/03/29 11:35:54 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:35:54 INFO Client:
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: ip-96-113-30-125.nest.r53.xcal.tv
+	 ApplicationMaster RPC port: 41803
+	 queue: default
+	 start time: 1617017749852
+	 final status: UNDEFINED
+	 tracking URL: http://ip-96-113-30-160.nest.r53.xcal.tv:20888/proxy/application_1615924390842_1197/
+	 user: hadoop
+21/03/29 11:35:55 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:35:56 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:35:57 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:35:58 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:35:59 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:00 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:01 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:02 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:03 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:04 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:05 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:06 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:07 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:08 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:09 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:10 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:11 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:12 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:13 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:14 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:15 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:16 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:17 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:18 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:19 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:20 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:21 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:22 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:23 INFO Client: Application report for application_1615924390842_1197 (state: RUNNING)
+21/03/29 11:36:24 INFO Client: Application report for application_1615924390842_1197 (state: FINISHED)
+21/03/29 11:36:24 INFO Client: 
+	 client token: N/A
+	 diagnostics: User class threw exception: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-1947480113-96.113.30.160-1615924351536:blk_1074219177_521118 file=/streaming-jobs--checkpoints/metadata
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:879)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:862)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:841)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:567)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:757)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:829)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._loadMore(ReaderBasedJsonParser.java:258)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._skipWSOrEnd(ReaderBasedJsonParser.java:2353)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:671)
+	at com.fasterxml.jackson.databind.ObjectReader._initForReading(ObjectReader.java:357)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1704)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1244)
+	at org.json4s.jackson.JsonMethods.parse(JsonMethods.scala:26)
+	at org.json4s.jackson.JsonMethods.parse$(JsonMethods.scala:19)
+	at org.json4s.jackson.JsonMethods$.parse(JsonMethods.scala:55)
+	at org.json4s.jackson.Serialization$.read(Serialization.scala:55)
+	at org.apache.spark.sql.execution.streaming.StreamMetadata$.read(StreamMetadata.scala:58)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.<init>(StreamExecution.scala:175)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.<init>(MicroBatchExecution.scala:49)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.createQuery(StreamingQueryManager.scala:317)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.startQuery(StreamingQueryManager.scala:359)
+	at org.apache.spark.sql.streaming.DataStreamWriter.start(DataStreamWriter.scala:317)
+	at yet.another.company.snmp.SnmpJob.writeToSinks(SnmpJob.scala:115)
+	at yet.another.company.snmp.SnmpJob.$anonfun$buildNewFlow$2(SnmpJob.scala:63)
+	at yet.another.company.core.util.syntax.package$ToIdOps$.$bar$greater$extension(package.scala:6)
+	at yet.another.company.snmp.SnmpJob.buildNewFlow(SnmpJob.scala:63)
+	at yet.another.company.snmp.SnmpJob.run(SnmpJob.scala:23)
+	at yet.another.company.snmp.Main$.main(Main.scala:19)
+	at yet.another.company.snmp.Main.main(Main.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:728)
+
+	 ApplicationMaster host: ip-96-113-30-125.nest.r53.xcal.tv
+	 ApplicationMaster RPC port: 41803
+	 queue: default
+	 start time: 1617017749852
+	 final status: FAILED
+	 tracking URL: http://ip-96-113-30-160.nest.r53.xcal.tv:20888/proxy/application_1615924390842_1197/
+	 user: hadoop
+21/03/29 11:36:24 ERROR Client: Application diagnostics message: User class threw exception: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-1947480113-96.113.30.160-1615924351536:blk_1074219177_521118 file=/streaming-jobs--checkpoints/metadata
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:879)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:862)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:841)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:567)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:757)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:829)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._loadMore(ReaderBasedJsonParser.java:258)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._skipWSOrEnd(ReaderBasedJsonParser.java:2353)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:671)
+	at com.fasterxml.jackson.databind.ObjectReader._initForReading(ObjectReader.java:357)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1704)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1244)
+	at org.json4s.jackson.JsonMethods.parse(JsonMethods.scala:26)
+	at org.json4s.jackson.JsonMethods.parse$(JsonMethods.scala:19)
+	at org.json4s.jackson.JsonMethods$.parse(JsonMethods.scala:55)
+	at org.json4s.jackson.Serialization$.read(Serialization.scala:55)
+	at org.apache.spark.sql.execution.streaming.StreamMetadata$.read(StreamMetadata.scala:58)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.<init>(StreamExecution.scala:175)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.<init>(MicroBatchExecution.scala:49)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.createQuery(StreamingQueryManager.scala:317)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.startQuery(StreamingQueryManager.scala:359)
+	at org.apache.spark.sql.streaming.DataStreamWriter.start(DataStreamWriter.scala:317)
+	at yet.another.company.snmp.SnmpJob.writeToSinks(SnmpJob.scala:115)
+	at yet.another.company.snmp.SnmpJob.$anonfun$buildNewFlow$2(SnmpJob.scala:63)
+	at yet.another.company.core.util.syntax.package$ToIdOps$.$bar$greater$extension(package.scala:6)
+	at yet.another.company.snmp.SnmpJob.buildNewFlow(SnmpJob.scala:63)
+	at yet.another.company.snmp.SnmpJob.run(SnmpJob.scala:23)
+	at yet.another.company.snmp.Main$.main(Main.scala:19)
+	at yet.another.company.snmp.Main.main(Main.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:728)
+
+Exception in thread "main" org.apache.spark.SparkException: Application application_1615924390842_1197 finished with failed status
+	at org.apache.spark.deploy.yarn.Client.run(Client.scala:1196)
+	at org.apache.spark.deploy.yarn.YarnClusterApplication.start(Client.scala:1587)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:936)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1015)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1024)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+21/03/29 11:36:24 INFO ShutdownHookManager: Shutdown hook called
+21/03/29 11:36:24 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-18cbc59e-aafb-44c9-8687-a87daad0bb1f
+21/03/29 11:36:24 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-1d923fa4-ce20-408e-acb6-25aa97cbaf70
+Command exiting with ret '1'

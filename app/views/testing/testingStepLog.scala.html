@@ -1,0 +1,17 @@
+@(res:Either[Exception,String])
+
+@main("Streaming Jobs Testing: Step log") {
+
+<div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col-10">
+        @res match {
+          case Right(text) => { Right: @text }
+          case Left(e) => { Left: @e.getMessage() }
+        }
+    </div>
+    <div class="col-1">
+    </div>
+</div>
+}

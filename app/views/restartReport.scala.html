@@ -1,0 +1,29 @@
+@import dto.DeploymentOption
+@import dto.ViewEmrAppRestartLog
+@(restarted: Seq[ViewEmrAppRestartLog])
+
+@main("Streaming Jobs Manager - restart report") {
+<h1>Auto-restart report</h1>
+<table class="table table-bordered">
+    <thead>
+    <th scope="col">App ID</th>
+    <th scope="col">EMR ID</th>
+    <th scope="col">Restarted</th>
+    <th scope="col">Prev start</th>
+    <th scope="col">Prev end</th>
+    <th scope="col">Fail cause</th>
+    </thead>
+    <tbody>
+    @for(r <- restarted) {
+    <tr>
+        <td>@r.emrAppId</td>
+        <td>@r.clusterId</td>
+        <td>@r.redeployTimestamp</td>
+        <td>@r.failedStepStart</td>
+        <td>@r.failedStepEnd</td>
+        <td>@r.reason</td>
+    </tr>
+    }
+    </tbody>
+</table>
+}

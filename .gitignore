@@ -1,0 +1,13 @@
+/logs
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/.g8
+.bloop
+.vscode
+.metals
+metals.*
+/RUNNING_PID
